@@ -115,10 +115,12 @@ cc_defaults {
         "-Wno-unused-variable",
         "-fvisibility=hidden",
         "-O3",
+        "-flto",
     ],
 
     cppflags:[
         "-O3",
+        "-flto",
     ],
 
     export_include_dirs: [
@@ -1928,10 +1930,6 @@ cc_library_static {
           "win",
         ],
       },
-    },
-
-    lto: {
-        thin: true,
     },
 
     defaults: ["skia_deps",
